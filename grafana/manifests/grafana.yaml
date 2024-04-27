@@ -79,12 +79,12 @@ kind: Service
 metadata:
   name: grafana
   namespace: grafana-qassie
+  labels:
+    app: grafana
 spec:
+  type: ClusterIP
   ports:
-    - port: 3000
-      protocol: TCP
-      targetPort: http-grafana
+  - port: 3000
+    name: grafana
   selector:
     app: grafana
-  sessionAffinity: None
-  type: LoadBalancer
