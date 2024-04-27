@@ -8,7 +8,7 @@ gcloud container clusters get-credentials iwd-demo --zone asia-southeast2-a
 kubectl apply -f grafana.yaml
 
 #port forward
-kubectl port-forward service/grafana 3011:3000 --namespace=grafana-cloud
+kubectl port-forward service/grafana 3011:3000 --namespace=<your namespace>
 
 
 # get secret
